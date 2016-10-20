@@ -1,0 +1,27 @@
+<?php
+
+  /*
+    ARCHIVO: controlador-reservacion.php
+    CREACIÓN: 17/10/2016
+    MODIFICACIÓN: 17/10/2016
+    DESCRIPCIÓN: La vista transforma el Modelo en una página web para que el 
+      usuario pueda interactuar con ella.
+  */
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>LISTADO</title>
+</head>
+<body>
+	<?php
+	foreach ($personas as $key) {
+    echo "Nombre: ".$key['nombre']."<br>";
+    echo "Apellidos: ".$key['apellido']."<br>";
+  }
+  ?>
+</body>
+</html>
