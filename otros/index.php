@@ -1,22 +1,28 @@
 <?php
 
-  //Script para la asignación de precios dependiendo la fecha.
+  /*
+    Archivo: config.php
+    CREACIÓN: 17/10/2016
+    MODIFICACIÓN: 17/10/2016
+    Descripción: Script para la asignación de precios dependiendo la fecha.
+  */
+  include_once('../config/config.php');
 
   /*Precios de las habitaciones*/
-  $a_a = 100; //Sencilla - Baja
-  $a_b = 150; //Sencilla - Alta
+  $a_a = A_A; //Sencilla - Alta
+  $a_b = A_B; //Sencilla - Baja
 
-  $b_a = 200; //Doble    - Baja
-  $b_b = 250; //Doble    - Alta
+  $b_a = B_A; //Doble    - Alta
+  $b_b = B_B; //Doble    - Baja
   
-  $c_a = 300; //Triple   - Baja
-  $c_b = 350; //Triple   - Alta
+  $c_a = C_A; //Triple   - Alta
+  $c_b = C_B; //Triple   - Baja
 
   /*Configuración para México*/
   date_default_timezone_set("America/Mexico_City");
 
   /*Obtención de datos de fecha*/
-  $dia = date("d-m-Y");
+  $dia = "18-12-2016";// = date("d-m-Y");
   $año = date("Y");
 
   /*SEMANA SANTA*/
@@ -42,14 +48,14 @@
 
   /*---*/
   /*SEMANA DE INVIERNO*/
-  $semanaInviernoDom1 = "18-12-".$año;
-  $semanaInviernoLun  = "19-12-".$año;
-  $semanaInviernoMar  = "20-12-".$año;
-  $semanaInviernoMie  = "21-12-".$año;
-  $semanaInviernoJue  = "22-12-".$año;
-  $semanaInviernoVie  = "23-12-".$año;
-  $semanaInviernoSab  = "24-12-".$año;
-  $semanaInviernoDom2 = "25-12-".$año;
+  $semanaInviernoDom1 = SEM_VER_DOM1."-".$año;
+  $semanaInviernoLun  = SEM_VER_LUN."-".$año;
+  $semanaInviernoMar  = SEM_VER_MAR."-".$año;
+  $semanaInviernoMie  = SEM_VER_MIE."-".$año;
+  $semanaInviernoJue  = SEM_VER_JUE."-".$año;
+  $semanaInviernoVie  = SEM_VER_VIE."-".$año;
+  $semanaInviernoSab  = SEM_VER_SAB."-".$año;
+  $semanaInviernoDom2 = SEM_VER_DOM2."-".$año;
   /*---*/
 
   switch ($dia) {
